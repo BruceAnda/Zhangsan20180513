@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- app bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+            android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="北京八维教育中心" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_b"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_search_black_24dp"
+                android:hint="搜索附近的吃喝玩乐"
+                android:singleLine="true"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="3dp"
+            android:src="@drawable/head" />
+    </LinearLayout>
+    <!-- 列表 -->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_margin="15dp"
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
